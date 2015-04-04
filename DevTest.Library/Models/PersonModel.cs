@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevTest.Library.Models
 {
-    public class PersonModel
+    public partial class PersonModel
     {
         public PersonModel()
         {

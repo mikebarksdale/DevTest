@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevTest.Library.Models
 {
-    public class CommentModel
+    public partial class CommentModel
     {
         public CommentModel()
         {

@@ -1,4 +1,5 @@
 ﻿using DevTest.Library.Data;
+using DevTest.Library.Palindrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -103,6 +104,7 @@ namespace DevTest.Console
              *    It’s your place in the world; it’s your life. Go on and do all you can with it, and make it the life you want to live. –Mae Jemison
              */
             var posts = PostProvider.GetPosts();
+            var persons = PostProvider.GetPersons();
 
             //implement exercise 3.1
 
@@ -115,7 +117,6 @@ namespace DevTest.Console
             System.Console.ReadLine();
 
             //implement exercise 3.3
-
             System.Console.WriteLine("End of exercise 3.3.");
             System.Console.ReadLine();
         }

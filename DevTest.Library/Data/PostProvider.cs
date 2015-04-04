@@ -13,13 +13,15 @@ namespace DevTest.Library.Data
     /// </summary>
     public static class PostProvider
     {
+        private static IList<PersonModel> _persons;
+
         /// <summary>
         /// Returns an enumerable of PostModels. Posts and comments and randomly generated.
         /// </summary>
         /// <returns>An enumerable of PostModels.</returns>
         public static IEnumerable<PostModel> GetPosts()
         {
-            var persons = GetPersons().ToList();
+            var persons = GetPersonData().ToList();
             persons.Randomize();
 
             var randomNumberGenerator = new Random();
@@ -41,14 +43,26 @@ namespace DevTest.Library.Data
             return posts;
         }
 
+        /// <summary>
+        /// Returns an enumerable of PersonModels.
+        /// </summary>
+        /// <returns>An enumerable of PersonModels.</returns>
+        public static IEnumerable<PersonModel> GetPersons()
+        {
+            return GetPersonData();
+        }
+
         #region Private Methods
         /// <summary>
         /// Provides a default list of persons.
         /// </summary>
         /// <returns>An enumerable of PersonModels.</returns>
-        private static IEnumerable<PersonModel> GetPersons()
+        private static IEnumerable<PersonModel> GetPersonData()
         {
-            return new List<PersonModel>
+            if (_persons != null)
+                return _persons;
+            
+            _persons = new List<PersonModel>
             {
                 new PersonModel { UserName = "sasha", BirthDate = new DateTime(1982, 1, 3) },
                 new PersonModel { UserName = "jeff", BirthDate = new DateTime(2000, 4, 18) },
@@ -65,6 +79,8 @@ namespace DevTest.Library.Data
                 new PersonModel { UserName = "susan", BirthDate = new DateTime(2001, 8, 7) },
                 new PersonModel { UserName = "monica", BirthDate = new DateTime(1995, 5, 29) },
             };
+
+            return _persons;
         }
 
         /// <summary>
