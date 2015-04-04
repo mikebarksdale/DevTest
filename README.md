@@ -16,7 +16,9 @@ There are 4 exercises:
 - Web: Implement functionality in a single page using a previous exercise.
 
 ###Procedure
-Clone the repository, do the exercises, and submit a pull request 
+Exercises 1, 2, and 3 are located in DevTest.Console. Exercise 4 is located in DevTest.Web.
+
+Clone the repository, do the exercises, and submit a pull request.
 
 --OR--
 
