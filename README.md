@@ -22,4 +22,4 @@ Clone the repository, do the exercises, and submit a pull request.
 
 --OR--
 
-Pull down the solution, zip, and provide the location of the zip file (or attached to an email) to the hiring manager If you choose this method, please include your name and email address.
+Pull down the solution, do the exercises, zip it, and provide the location of the zip file (or attached to an email) to your respective manager.
