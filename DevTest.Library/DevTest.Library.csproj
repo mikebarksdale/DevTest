@@ -45,13 +45,15 @@
     <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\PostModel.cs" />
+    <Compile Include="MyCode\Models\PostAndPerson.cs" />
+    <Compile Include="MyCode\PageingHelper.cs" />
+    <Compile Include="MyCode\PostProviderHelper.cs" />
+    <Compile Include="MyCode\Extension\StringExtensionMethods.cs" />
     <Compile Include="Palindrome\IPalindromeChecker.cs" />
-    <Compile Include="Palindrome\MyPalindromeChecker.cs" />
+    <Compile Include="MyCode\MyPalindromeChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MyCode\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

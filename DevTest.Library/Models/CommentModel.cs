@@ -1,20 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevTest.Library.Models
 {
-    public partial class CommentModel
-    {
-        public CommentModel()
-        {
-            CommentId = Guid.NewGuid().ToString();
-        }
+	public class CommentModel
+	{
+		#region  Properties
 
-        public string CommentId { get; set; }
-        public string Comment { get; set; }
-        public string PersonId { get; set; }
-    }
+		public string Comment { get; set; }
+
+		public string CommentId { get; set; }
+		public string PersonId { get; set; }
+
+		#endregion
+
+		public CommentModel()
+		{
+			CommentId = Guid.NewGuid().ToString();
+		}
+
+		#region Public
+
+		public override string ToString()
+		{
+			return Comment;
+		}
+
+		#endregion
+	}
 }

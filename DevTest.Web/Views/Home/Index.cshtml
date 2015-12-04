@@ -13,9 +13,27 @@
     <p>
         NOTE: You may modify any code within the DevTest.Web project, including the creation of folders.
     </p>
-    <button id="loadButton" class="btn btn-primary">Load</button>
+	<button id="loadButton" class="btn btn-primary" onclick="GetExcersizeResults()">Load</button>
 </div>
 
 <div id="comments">
-    <!-- Load all comments here. -->
+	
 </div>
+
+<script>
+	function GetExcersizeResults() {
+		$.ajax({
+			url: '/Home/GetExcersizeResults',
+			type: 'POST',
+			data: {},
+			success: function (results) {
+				$.each(results, function (key, value) {
+					$('#comments').append('<p>' + value + '</p><br/>');
+				});
+			},
+			error: function(xhr) {
+				alert(xhr.responseText);
+			}
+		});
+	}
+</script>

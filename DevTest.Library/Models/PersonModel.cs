@@ -1,20 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevTest.Library.Models
 {
-    public partial class PersonModel
-    {
-        public PersonModel()
-        {
-            Id = Guid.NewGuid().ToString();
-        }
+	public class PersonModel
+	{
+		#region  Properties
 
-        public string Id { get; set;}
-        public string UserName { get; set; }
-        public DateTime BirthDate { get; set; }
-    }
+		public DateTime BirthDate { get; set; }
+
+		public string Id { get; set; }
+		public string UserName { get; set; }
+
+		#endregion
+
+		public PersonModel()
+		{
+			Id = Guid.NewGuid().ToString();
+		}
+
+		#region Public
+
+		public override string ToString()
+		{
+			return UserName;
+		}
+
+		#endregion
+	}
 }
